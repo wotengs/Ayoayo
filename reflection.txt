@@ -1,0 +1,45 @@
+Initial Reflection:
+
+When I first saw the Ayoayo take-away assignment, my immediate reaction was that it’s essentially an implementation of Mancala-like sowing mechanics in code, with a couple extra capture rules and an explicit text-based interface. My main concerns were:
+
+Data Modeling: How best to represent the board? I knew each player needs six pits and one store. Using arrays for pits and a separate variable for the store felt natural, and making them private enforces encapsulation.
+
+Class Structure: The requirements call for an Ayoayo class plus a Player class. My first thought was to let the Ayoayo class own two Player instances, and have playGame manipulate those. Keeping board logic in Ayoayo and per-player data in Player keeps responsibilities clear.
+
+Sowing Logic: The core challenge is correctly iterating around both players’ pits and only depositing in the active player’s store. I knew I’d need a helper to wrap around from the last pit on one side to the first pit on the other, skipping the opponent’s store.
+
+Special Rules: The two specials—extra turn when landing in store, capture when landing in an empty pit—felt like post-sow checks. I wanted to isolate them into clear conditional blocks after sowing completes.
+
+End-game Detection: Recognizing when one side’s pits are all empty should trigger capturing of remaining seeds on the other side. A small helper to check emptiness would make playGame cleaner.
+
+Text-Based I/O: Since everything is console-based, I planned simple console.log statements for printBoard and logging the extra-turn messages.
+
+Testing & Iteration: I anticipated writing some manual sequences in an index.js driver to verify extra-turn chaining, captures, invalid inputs, and full-game termination.
+
+Overall, my approach was to scaffold the classes and basic methods first, then incrementally build and test the sow loop, special rules, and end-game conditions. Encapsulating repeated logic into helper methods (_sow, _allPitsEmpty, _oppositeIndex) would keep the code readable and maintainable.
+
+
+
+Initial Reflection:
+- First thoughts were to understand the game rules thoroughly
+- Decided to implement the board as two arrays for each player's pits plus a store
+- Planned to handle the circular sowing by tracking current position
+- Anticipated challenges with the special rules (extra turns and captures)
+
+Challenges Encountered:
+- Implementing the circular sowing logic was tricky
+- Handling the special rules required careful state tracking
+- Ensuring all edge cases were covered (empty pits, game end conditions)
+- Debugging the capture logic took some time
+
+Key Takeaways:
+- Breaking down complex game rules into smaller methods helps
+- Proper state management is crucial for turn-based games
+- Testing each rule separately helps identify issues early
+- The implementation became clearer after drawing out the board flow
+
+Final Reflection:
+- The implementation meets all the requirements
+- The code could be further optimized but prioritizes readability
+- Additional helper methods might make the code more modular
+- Overall, this was a great exercise in implementing game logic
