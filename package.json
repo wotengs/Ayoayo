@@ -1,0 +1,21 @@
+{
+  "name": "ayoayogame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Ayoayo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wotengs/Ayoayo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wotengs/Ayoayo/issues"
+  },
+  "homepage": "https://github.com/wotengs/Ayoayo#readme"
+}
