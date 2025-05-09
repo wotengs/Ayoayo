@@ -37,7 +37,7 @@ cd ayoayo-game
 
 ## How to Play
 
-Run the game using Node.js: node test.js
+Run the game using Node.js: ```node test.js```
 
 Players take turns selecting pits (1-6) on their side of the board
 
@@ -81,22 +81,22 @@ AyoayoGame/
 ### Running the Game
 
 To run the demo game:
-
 bash
-node test.js
+```node test.js```
 
 ## To create your own game instance
 
 javascript
-const Ayoayo = require('./Ayoayo');
+```const Ayoayo = require('./Ayoayo');```
 
-const game = new Ayoayo();
-const player1 = game.createPlayer("Player1");
-const player2 = game.createPlayer("Player2");
+```const game = new Ayoayo();```
+
+```const player1 = game.createPlayer("Player1");```
+```const player2 = game.createPlayer("Player2");```
 
 // Play moves
-game.playGame(1, 3); // Player 1 moves from pit 3
-game.playGame(2, 4); // Player 2 moves from pit 4
+```game.playGame(1, 3); // Player 1 moves from pit 3```
+```game.playGame(2, 4); // Player 2 moves from pit 4```
 // Continue playing...
 
 ### Testing
