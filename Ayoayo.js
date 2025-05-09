@@ -142,6 +142,5 @@ class Ayoayo {
         ];
     }
 }
-
 // Export the class directly
 module.exports = Ayoayo;

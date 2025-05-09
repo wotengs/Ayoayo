@@ -4,7 +4,6 @@ function testGame() {
     const game = new Ayoayo();
     const player1 = game.createPlayer("Jensen");
     const player2 = game.createPlayer("Brian");
-
     console.log(game.playGame(1, 3));
     console.log(game.playGame(1, 1));
     console.log(game.playGame(2, 3));
